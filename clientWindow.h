@@ -1,5 +1,5 @@
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+#ifndef CLIENTWINDOW_H
+#define CLIENTWINDOW_H
 
 #include <QMainWindow>
 #include <QTcpSocket>
@@ -10,13 +10,13 @@ QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 
-class MainWindow : public QMainWindow
+class ClientWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
+    ClientWindow(QWidget *parent = nullptr);
+    ~ClientWindow();
 
 private slots:
     void on_connectButton_clicked();
@@ -42,4 +42,4 @@ private:
     //Functions
     void sentToServer(QString message);
 };
-#endif // MAINWINDOW_H
+#endif // CLIENTWINDOW_H

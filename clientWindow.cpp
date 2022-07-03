@@ -1,7 +1,7 @@
-#include "mainwindow.h"
+#include "clientWindow.h"
 #include "ui_mainwindow.h"
 
-MainWindow::MainWindow(QWidget *parent)
+ClientWindow::ClientWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow),
       _blockSize(0)
@@ -12,32 +12,32 @@ MainWindow::MainWindow(QWidget *parent)
     this->_socket = new QTcpSocket(this);
 
     //Connecting sockets
-    QObject::connect(this->_socket, &QTcpSocket::readyRead, this, &MainWindow::slotReadyRead);
+    QObject::connect(this->_socket, &QTcpSocket::readyRead, this, &ClientWindow::slotReadyRead);
     QObject::connect(this->_socket, &QTcpSocket::disconnected, this->_socket, &QTcpSocket::deleteLater);
 }
 
-MainWindow::~MainWindow()
+ClientWindow::~ClientWindow()
 {
     delete ui;
 }
 
 
 //Buttons slots
-void MainWindow::on_connectButton_clicked()
+void ClientWindow::on_connectButton_clicked()
 {
     //Connect socket to local adress and port
     this->_socket->connectToHost("127.0.0.1", 2323);
 }
 
 //Clicked on button
-void MainWindow::on_sendButton_clicked()
+void ClientWindow::on_sendButton_clicked()
 {
     //Sent message on server
     this->sentToServer(this->ui->lineEdit->text());
 }
 
 //Clicked ENTER
-void MainWindow::on_lineEdit_returnPressed()
+void ClientWindow::on_lineEdit_returnPressed()
 {
     //Sent message on server
     this->sentToServer(this->ui->lineEdit->text());
@@ -47,7 +47,7 @@ void MainWindow::on_lineEdit_returnPressed()
 //Reading and saving messages functions
 
 //Reading message from data stream
-void MainWindow::slotReadyRead()
+void ClientWindow::slotReadyRead()
 {
     //QDataStream for reading data
     QDataStream inDataStream(this->_socket);
@@ -96,7 +96,7 @@ void MainWindow::slotReadyRead()
 
 
 //Send message on server
-void MainWindow::sentToServer(QString message)
+void ClientWindow::sentToServer(QString message)
 {
     //Clearing data before sending new message
     this->_data.clear();
