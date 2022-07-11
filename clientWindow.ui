@@ -14,12 +14,12 @@
    <string>Chat</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>30</y>
-      <width>431</width>
+      <width>401</width>
       <height>411</height>
      </rect>
     </property>
@@ -46,26 +46,37 @@
    <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>460</x>
+      <x>420</x>
       <y>30</y>
-      <width>101</width>
-      <height>81</height>
+      <width>127</width>
+      <height>141</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout_2">
+    <layout class="QVBoxLayout" name="verticalLayout_4">
      <item>
-      <widget class="QPushButton" name="connectButton">
-       <property name="text">
-        <string>Connect</string>
-       </property>
-      </widget>
+      <widget class="QLineEdit" name="userNameLineEdit"/>
      </item>
      <item>
-      <widget class="QPushButton" name="exitButton">
-       <property name="text">
-        <string>Exit</string>
-       </property>
-      </widget>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QPushButton" name="connectButton">
+           <property name="text">
+            <string>Connect</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="exitButton">
+           <property name="text">
+            <string>Exit</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
      </item>
     </layout>
    </widget>
@@ -85,18 +96,18 @@
  <resources/>
  <connections>
   <connection>
-   <sender>exitButton</sender>
+   <sender>connectButton</sender>
    <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>close()</slot>
+   <receiver>userNameLineEdit</receiver>
+   <slot>hide()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>540</x>
-     <y>119</y>
+     <x>454</x>
+     <y>147</y>
     </hint>
     <hint type="destinationlabel">
-     <x>517</x>
-     <y>224</y>
+     <x>451</x>
+     <y>117</y>
     </hint>
    </hints>
   </connection>

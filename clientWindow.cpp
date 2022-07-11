@@ -1,10 +1,9 @@
 #include "clientWindow.h"
 #include "ui_mainwindow.h"
 
-ClientWindow::ClientWindow(QWidget *parent)
-    : QMainWindow(parent)
-    , ui(new Ui::MainWindow),
-      _blockSize(0)
+ClientWindow::ClientWindow(const QString& host_ip, const int& host_port, QWidget *parent)
+    : QMainWindow(parent), _hostIp(host_ip),
+      _hostPort(host_port), ui(new Ui::MainWindow), _blockSize(0)
 {
     ui->setupUi(this);
 
@@ -18,6 +17,8 @@ ClientWindow::ClientWindow(QWidget *parent)
 
 ClientWindow::~ClientWindow()
 {
+    this->_socket->disconnectFromHost();
+
     delete ui;
 }
 
@@ -26,7 +27,12 @@ ClientWindow::~ClientWindow()
 void ClientWindow::on_connectButton_clicked()
 {
     //Connect socket to local adress and port
-    this->_socket->connectToHost("127.0.0.1", 2323);
+    this->_socket->connectToHost(this->_hostIp, this->_hostPort);
+
+    if(this->_socket->state() == QTcpSocket::ConnectedState)
+    {
+        this->ui->connectButton->hide();
+    }
 }
 
 //Clicked on button

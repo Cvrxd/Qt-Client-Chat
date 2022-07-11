@@ -15,7 +15,7 @@ class ClientWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    ClientWindow(QWidget *parent = nullptr);
+    ClientWindow(const QString& host_ip, const int& host_port, QWidget *parent = nullptr);
     ~ClientWindow();
 
 private slots:
@@ -30,6 +30,9 @@ public slots:
 
 private:
     //Variables
+    QString _hostIp;
+    int _hostPort;
+
     Ui::MainWindow *ui;
 
     //Size of sending data
