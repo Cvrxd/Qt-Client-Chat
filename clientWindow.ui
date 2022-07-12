@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>568</width>
+    <width>561</width>
     <height>493</height>
    </rect>
   </property>
@@ -43,40 +43,45 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QPushButton" name="exitButton">
     <property name="geometry">
      <rect>
       <x>420</x>
       <y>30</y>
-      <width>127</width>
-      <height>141</height>
+      <width>121</width>
+      <height>29</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout_4">
+    <property name="text">
+     <string>Exit</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>130</y>
+      <width>127</width>
+      <height>93</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_6">
+     <item>
+      <widget class="QLabel" name="userNameLabel">
+       <property name="text">
+        <string>  Enter user name</string>
+       </property>
+      </widget>
+     </item>
      <item>
       <widget class="QLineEdit" name="userNameLineEdit"/>
      </item>
      <item>
-      <layout class="QVBoxLayout" name="verticalLayout_3">
-       <item>
-        <layout class="QVBoxLayout" name="verticalLayout_2">
-         <item>
-          <widget class="QPushButton" name="connectButton">
-           <property name="text">
-            <string>Connect</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="exitButton">
-           <property name="text">
-            <string>Exit</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-      </layout>
+      <widget class="QPushButton" name="connectButton">
+       <property name="text">
+        <string>Connect</string>
+       </property>
+      </widget>
      </item>
     </layout>
    </widget>
@@ -86,7 +91,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>568</width>
+     <width>561</width>
      <height>25</height>
     </rect>
    </property>
@@ -96,18 +101,18 @@
  <resources/>
  <connections>
   <connection>
-   <sender>connectButton</sender>
+   <sender>exitButton</sender>
    <signal>clicked()</signal>
-   <receiver>userNameLineEdit</receiver>
-   <slot>hide()</slot>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>454</x>
-     <y>147</y>
+     <x>485</x>
+     <y>163</y>
     </hint>
     <hint type="destinationlabel">
-     <x>451</x>
-     <y>117</y>
+     <x>480</x>
+     <y>254</y>
     </hint>
    </hints>
   </connection>

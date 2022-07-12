@@ -9,7 +9,7 @@
         "-I",
         "C:\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\Sculptor\\AppData\\Local\\Temp\\QtCreator-hpRfFe\\clang-uiheader-UxgXal",
+        "C:\\Users\\Sculptor\\AppData\\Local\\Temp\\QtCreator-eCFyya\\clang-uiheader-WXBnkY",
         "-nostdinc",
         "-nostdinc++",
         "-std=gnu++1z",
@@ -33,7 +33,7 @@
         "-DQT_CORE_LIB",
         "-DQT_NEEDS_QMAIN",
         "-I",
-        "C:\\Users\\Sculptor\\Documents\\Client",
+        "C:\\Users\\Sculptor\\Documents\\Client_",
         "-I",
         "C:\\Qt\\6.3.1\\mingw_64\\include",
         "-I",
@@ -45,9 +45,7 @@
         "-I",
         "C:\\Qt\\6.3.1\\mingw_64\\include\\QtCore",
         "-I",
-        "C:\\Users\\Sculptor\\Documents\\build-Client-Desktop_Qt_6_3_1_MinGW_64_bit-Release\\release",
-        "-I",
-        "C:\\Users\\Sculptor\\Documents\\build-Client-Desktop_Qt_6_3_1_MinGW_64_bit-Release",
+        "C:\\Users\\Sculptor\\Documents\\Client_\\release",
         "-I",
         "C:\\Qt\\6.3.1\\mingw_64\\mkspecs\\win32-g++",
         "-isystem",
@@ -71,10 +69,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "C:\\Users\\Sculptor\\Documents\\Client\\main.cpp"
+        "C:\\Users\\Sculptor\\Documents\\Client_\\clientWindow.cpp"
     ],
-    "directory": "C:/Users/Sculptor/Documents/build-Client-Desktop_Qt_6_3_1_MinGW_64_bit-Release/.qtc_clangd",
-    "file": "C:/Users/Sculptor/Documents/Client/main.cpp"
+    "directory": "C:/Users/Sculptor/Documents/Client_/.qtc_clangd",
+    "file": "C:/Users/Sculptor/Documents/Client_/clientWindow.cpp"
 },
 {
     "arguments": [
@@ -86,7 +84,7 @@
         "-I",
         "C:\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\Sculptor\\AppData\\Local\\Temp\\QtCreator-hpRfFe\\clang-uiheader-UxgXal",
+        "C:\\Users\\Sculptor\\AppData\\Local\\Temp\\QtCreator-eCFyya\\clang-uiheader-WXBnkY",
         "-nostdinc",
         "-nostdinc++",
         "-std=gnu++1z",
@@ -110,7 +108,7 @@
         "-DQT_CORE_LIB",
         "-DQT_NEEDS_QMAIN",
         "-I",
-        "C:\\Users\\Sculptor\\Documents\\Client",
+        "C:\\Users\\Sculptor\\Documents\\Client_",
         "-I",
         "C:\\Qt\\6.3.1\\mingw_64\\include",
         "-I",
@@ -122,9 +120,7 @@
         "-I",
         "C:\\Qt\\6.3.1\\mingw_64\\include\\QtCore",
         "-I",
-        "C:\\Users\\Sculptor\\Documents\\build-Client-Desktop_Qt_6_3_1_MinGW_64_bit-Release\\release",
-        "-I",
-        "C:\\Users\\Sculptor\\Documents\\build-Client-Desktop_Qt_6_3_1_MinGW_64_bit-Release",
+        "C:\\Users\\Sculptor\\Documents\\Client_\\release",
         "-I",
         "C:\\Qt\\6.3.1\\mingw_64\\mkspecs\\win32-g++",
         "-isystem",
@@ -148,10 +144,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "C:\\Users\\Sculptor\\Documents\\Client\\mainwindow.cpp"
+        "C:\\Users\\Sculptor\\Documents\\Client_\\main.cpp"
     ],
-    "directory": "C:/Users/Sculptor/Documents/build-Client-Desktop_Qt_6_3_1_MinGW_64_bit-Release/.qtc_clangd",
-    "file": "C:/Users/Sculptor/Documents/Client/mainwindow.cpp"
+    "directory": "C:/Users/Sculptor/Documents/Client_/.qtc_clangd",
+    "file": "C:/Users/Sculptor/Documents/Client_/main.cpp"
 },
 {
     "arguments": [
@@ -163,7 +159,7 @@
         "-I",
         "C:\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\Sculptor\\AppData\\Local\\Temp\\QtCreator-hpRfFe\\clang-uiheader-UxgXal",
+        "C:\\Users\\Sculptor\\AppData\\Local\\Temp\\QtCreator-eCFyya\\clang-uiheader-WXBnkY",
         "-nostdinc",
         "-nostdinc++",
         "-std=gnu++1z",
@@ -187,7 +183,7 @@
         "-DQT_CORE_LIB",
         "-DQT_NEEDS_QMAIN",
         "-I",
-        "C:\\Users\\Sculptor\\Documents\\Client",
+        "C:\\Users\\Sculptor\\Documents\\Client_",
         "-I",
         "C:\\Qt\\6.3.1\\mingw_64\\include",
         "-I",
@@ -199,9 +195,7 @@
         "-I",
         "C:\\Qt\\6.3.1\\mingw_64\\include\\QtCore",
         "-I",
-        "C:\\Users\\Sculptor\\Documents\\build-Client-Desktop_Qt_6_3_1_MinGW_64_bit-Release\\release",
-        "-I",
-        "C:\\Users\\Sculptor\\Documents\\build-Client-Desktop_Qt_6_3_1_MinGW_64_bit-Release",
+        "C:\\Users\\Sculptor\\Documents\\Client_\\release",
         "-I",
         "C:\\Qt\\6.3.1\\mingw_64\\mkspecs\\win32-g++",
         "-isystem",
@@ -225,10 +219,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "C:\\Users\\Sculptor\\Documents\\Client\\mainwindow.h"
+        "C:\\Users\\Sculptor\\Documents\\Client_\\clientWindow.h"
     ],
-    "directory": "C:/Users/Sculptor/Documents/build-Client-Desktop_Qt_6_3_1_MinGW_64_bit-Release/.qtc_clangd",
-    "file": "C:/Users/Sculptor/Documents/Client/mainwindow.h"
+    "directory": "C:/Users/Sculptor/Documents/Client_/.qtc_clangd",
+    "file": "C:/Users/Sculptor/Documents/Client_/clientWindow.h"
 },
 {
     "arguments": [
@@ -240,7 +234,7 @@
         "-I",
         "C:\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\Sculptor\\AppData\\Local\\Temp\\QtCreator-hpRfFe\\clang-uiheader-UxgXal",
+        "C:\\Users\\Sculptor\\AppData\\Local\\Temp\\QtCreator-eCFyya\\clang-uiheader-WXBnkY",
         "-nostdinc",
         "-nostdinc++",
         "-std=gnu++1z",
@@ -264,7 +258,7 @@
         "-DQT_CORE_LIB",
         "-DQT_NEEDS_QMAIN",
         "-I",
-        "C:\\Users\\Sculptor\\Documents\\Client",
+        "C:\\Users\\Sculptor\\Documents\\Client_",
         "-I",
         "C:\\Qt\\6.3.1\\mingw_64\\include",
         "-I",
@@ -276,9 +270,7 @@
         "-I",
         "C:\\Qt\\6.3.1\\mingw_64\\include\\QtCore",
         "-I",
-        "C:\\Users\\Sculptor\\Documents\\build-Client-Desktop_Qt_6_3_1_MinGW_64_bit-Release\\release",
-        "-I",
-        "C:\\Users\\Sculptor\\Documents\\build-Client-Desktop_Qt_6_3_1_MinGW_64_bit-Release",
+        "C:\\Users\\Sculptor\\Documents\\Client_\\release",
         "-I",
         "C:\\Qt\\6.3.1\\mingw_64\\mkspecs\\win32-g++",
         "-isystem",
@@ -302,9 +294,9 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "C:\\Users\\Sculptor\\Documents\\build-Client-Desktop_Qt_6_3_1_MinGW_64_bit-Release\\ui_mainwindow.h"
+        "C:\\Users\\Sculptor\\Documents\\Client_\\ui_clientWindow.h"
     ],
-    "directory": "C:/Users/Sculptor/Documents/build-Client-Desktop_Qt_6_3_1_MinGW_64_bit-Release/.qtc_clangd",
-    "file": "C:/Users/Sculptor/Documents/build-Client-Desktop_Qt_6_3_1_MinGW_64_bit-Release/ui_mainwindow.h"
+    "directory": "C:/Users/Sculptor/Documents/Client_/.qtc_clangd",
+    "file": "C:/Users/Sculptor/Documents/Client_/ui_clientWindow.h"
 }
 ]

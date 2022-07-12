@@ -29,7 +29,13 @@ public slots:
     void slotReadyRead();
 
 private:
-    //Variables
+    struct ClientInfo
+    {
+        QString user_name;
+    };
+
+    ClientInfo _clientInfo;
+
     QString _hostIp;
     int _hostPort;
 

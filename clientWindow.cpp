@@ -1,5 +1,5 @@
 #include "clientWindow.h"
-#include "ui_mainwindow.h"
+#include "ui_clientWindow.h"
 
 ClientWindow::ClientWindow(const QString& host_ip, const int& host_port, QWidget *parent)
     : QMainWindow(parent), _hostIp(host_ip),
@@ -26,12 +26,26 @@ ClientWindow::~ClientWindow()
 //Buttons slots
 void ClientWindow::on_connectButton_clicked()
 {
-    //Connect socket to local adress and port
-    this->_socket->connectToHost(this->_hostIp, this->_hostPort);
+     this->ui->userNameLabel->setStyleSheet("color: rgb(0, 0, 0)");
 
-    if(this->_socket->state() == QTcpSocket::ConnectedState)
+    //If entered user name
+    if(!this->ui->userNameLineEdit->text().isEmpty())
     {
-        this->ui->connectButton->hide();
+        this->_clientInfo.user_name = this->ui->userNameLineEdit->text();
+
+        //Connect socket to local adress and port
+        this->_socket->connectToHost(this->_hostIp, this->_hostPort);
+
+        if(this->_socket->state() == QTcpSocket::ConnectedState)
+        {
+            this->ui->connectButton->hide();
+            this->ui->userNameLineEdit->hide();
+            this->ui->userNameLabel->hide();
+        }
+    }
+    else
+    {
+        this->ui->userNameLabel->setStyleSheet("color: rgb(255, 0, 0)");
     }
 }
 
@@ -48,9 +62,6 @@ void ClientWindow::on_lineEdit_returnPressed()
     //Sent message on server
     this->sentToServer(this->ui->lineEdit->text());
 }
-
-
-//Reading and saving messages functions
 
 //Reading message from data stream
 void ClientWindow::slotReadyRead()
@@ -84,12 +95,13 @@ void ClientWindow::slotReadyRead()
 
             QString message;
             QTime   time;
+            QString user_name;
 
             //Read data from dataStream
-            inDataStream >> time >> message;
+            inDataStream >> time >> user_name >> message;
 
             //Add message to text browser
-            this->ui->textBrowser->append(time.toString() + ' ' + message);
+            this->ui->textBrowser->append(time.toString() + ' ' + user_name + ": " + message);
 
             this->_blockSize = 0;
         }
@@ -113,7 +125,7 @@ void ClientWindow::sentToServer(QString message)
      //QDataStream version
      outDataStream.setVersion(QDataStream::Version::Qt_6_3);
 
-     outDataStream << quint16(0) << QTime::currentTime() << message;
+     outDataStream << quint16(0) << QTime::currentTime() << this->_clientInfo.user_name << message;
 
      outDataStream.device()->seek(0);
      outDataStream << quint16(this->_data.size() - sizeof(quint16));
